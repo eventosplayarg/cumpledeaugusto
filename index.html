@@ -427,7 +427,7 @@
   </div>
   <div class="hero-caption">
     <div class="eyebrow">Sábado 11 de Julio</div>
-    <h1>El primer añito de Augusto</h1>
+    <h1>El primer año de Augusto</h1>
   </div>
   <div class="hero-nav">
     <button class="arrow-btn" id="prevBtn" aria-label="Foto anterior">
@@ -444,7 +444,7 @@
 <section id="anito">
   <div class="section-title reveal">
     <div class="eyebrow">Un día para atesorar</div>
-    <h2>Mi querido primer añito</h2>
+    <h2>Gracias por tu presencia</h2>
   </div>
 
   <!-- ============ GALERÍA: 1 vertical + 4 horizontales ============ -->
@@ -572,7 +572,19 @@ document.querySelectorAll('.nav-link').forEach(link => {
 });
 
 /* ---------- carrusel de fotos (1 a 10) ---------- */
-const TOTAL_PHOTOS = 10;
+const HERO_PHOTOS = [
+  "papaymama.jpg",
+  "amiguito.jpg",
+  "caramelos.jpg",
+  "flia.jpg",
+  "ositos.jpg",
+  "pan.jpg",
+  "pelotero.jpg",
+  "piñata.jpg",
+  "vasos.jpg",
+  "regalos.jpg"
+];
+const TOTAL_PHOTOS = HERO_PHOTOS.length;
 let currentPhoto = 1;
 const heroImg = document.getElementById('hero-img');
 const photoCount = document.getElementById('photoCount');
@@ -582,8 +594,7 @@ const nextBtn = document.getElementById('nextBtn');
 function updateHero(){
   heroImg.style.opacity = 0;
   setTimeout(() => {
-    // EDITAR: las imágenes deben llamarse img/foto1.jpg, img/foto2.jpg ... img/foto10.jpg
-    heroImg.src = `img/foto${currentPhoto}.jpg`;
+    heroImg.src = HERO_PHOTOS[currentPhoto - 1];
     heroImg.style.opacity = 1;
   }, 200);
   photoCount.textContent = `${currentPhoto} / ${TOTAL_PHOTOS}`;
