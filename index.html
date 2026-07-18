@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Augusto · Cumpleaños</title>
+<title>Augusto · Primer Añito</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,19 +11,16 @@
 
 <style>
   :root{
-    --bg:#69AFD6;
-    --bg-alt:#D1C7C6;
-
-    --ivory:#F8F4EE;
-    --ivory-dim:#B7AEA6;
-
-    --gold:#C8A45A;
-    --gold-soft:#E8D29A;
-
-    --green-deep:#2F4A5A;
-
-    --line:rgba(105,175,214,0.25);
-    
+    --bg:#0b1622;
+    --bg-alt:#111f2e;
+    --ivory:#f4f1ea;
+    --ivory-dim:#c9d4dc;
+    --celeste:#7ec4e8;
+    --celeste-soft:#aadcf2;
+    --madera:#a9764f;
+    --madera-soft:#c99a70;
+    --wood-deep:#3c2a1c;
+    --line:rgba(126,196,232,0.28);
     --ease:cubic-bezier(.22,1,.36,1);
   }
 
@@ -50,7 +47,7 @@
   button{font-family:inherit; cursor:pointer;}
   img{display:block; width:100%; height:100%; object-fit:cover;}
 
-  ::selection{background:var(--gold); color:#0a0a09;}
+  ::selection{background:var(--celeste); color:#0b1622;}
 
   /* ---------- utility ---------- */
   .eyebrow{
@@ -58,18 +55,18 @@
     text-transform:uppercase;
     letter-spacing:0.35em;
     font-size:0.72rem;
-    color:var(--gold-soft);
+    color:var(--celeste-soft);
   }
 
   .seal{
     width:46px;height:46px;
-    border:1px solid var(--gold);
+    border:1px solid var(--madera);
     border-radius:50%;
     display:flex;align-items:center;justify-content:center;
     font-family:'Playfair Display',serif;
     font-style:italic;
     font-size:1.1rem;
-    color:var(--gold-soft);
+    color:var(--celeste-soft);
     margin:0 auto 22px auto;
     opacity:0;
     transform:scale(.6) rotate(-15deg);
@@ -102,14 +99,14 @@
     display:flex; align-items:center; justify-content:space-between;
     padding:26px 6vw;
     z-index:200;
-    background:linear-gradient(to bottom, rgba(10,10,9,0.85), transparent);
+    background:linear-gradient(to bottom, rgba(11,22,34,0.85), transparent);
     transition:background .4s ease;
   }
   .brand{
     font-family:'Playfair Display',serif;
     font-style:italic;
     font-size:1.25rem;
-    color:var(--gold-soft);
+    color:var(--celeste-soft);
     letter-spacing:0.03em;
   }
   .menu-toggle{
@@ -124,7 +121,7 @@
     width:26px; height:16px; position:relative;
   }
   .burger span{
-    position:absolute; left:0; width:100%; height:1px; background:var(--gold);
+    position:absolute; left:0; width:100%; height:1px; background:var(--celeste);
     transition:transform .4s var(--ease), opacity .3s ease, top .3s ease;
   }
   .burger span:nth-child(1){top:0;}
@@ -137,7 +134,7 @@
   /* ---------- fullscreen menu overlay ---------- */
   .nav-overlay{
     position:fixed; inset:0; z-index:190;
-    background:rgba(8,8,7,0.98);
+    background:rgba(8,14,20,0.98);
     display:flex; flex-direction:column; align-items:center; justify-content:center; gap:34px;
     opacity:0; visibility:hidden;
     transition:opacity .5s var(--ease), visibility .5s;
@@ -150,11 +147,11 @@
     position:relative;
     transition:color .3s ease;
   }
-  .nav-overlay a:hover{color:var(--gold-soft);}
+  .nav-overlay a:hover{color:var(--celeste-soft);}
   .nav-overlay a::after{
     content:'';
     position:absolute; left:50%; bottom:-8px; width:0; height:1px;
-    background:var(--gold); transition:width .35s var(--ease), left .35s var(--ease);
+    background:var(--celeste); transition:width .35s var(--ease), left .35s var(--ease);
   }
   .nav-overlay a:hover::after{width:100%; left:0;}
 
@@ -162,13 +159,13 @@
   .wa-float{
     position:fixed; right:26px; bottom:28px; z-index:180;
     width:56px; height:56px; border-radius:50%;
-    background:var(--green-deep); border:1px solid var(--gold);
+    background:var(--wood-deep); border:1px solid var(--celeste);
     display:flex; align-items:center; justify-content:center;
     box-shadow:0 6px 22px rgba(0,0,0,0.55);
     transition:transform .35s var(--ease);
   }
   .wa-float:hover{transform:translateY(-4px) scale(1.05);}
-  .wa-float svg{width:26px; height:26px; fill:var(--gold-soft);}
+  .wa-float svg{width:26px; height:26px; fill:var(--celeste-soft);}
 
   /* ================= HERO / CAROUSEL ================= */
   .hero{
@@ -184,7 +181,7 @@
   .hero-frame::after{
     content:'';
     position:absolute; inset:0;
-    background:linear-gradient(to top, rgba(10,10,9,0.92) 0%, rgba(10,10,9,0.15) 40%, rgba(10,10,9,0.55) 100%);
+    background:linear-gradient(to top, rgba(11,22,34,0.92) 0%, rgba(11,22,34,0.15) 40%, rgba(11,22,34,0.55) 100%);
   }
   #hero-img{
     width:100%; height:100%; object-fit:cover;
@@ -208,16 +205,16 @@
   }
   .arrow-btn{
     width:44px; height:44px; border-radius:50%;
-    border:1px solid var(--gold); background:rgba(10,10,9,0.35);
+    border:1px solid var(--celeste); background:rgba(11,22,34,0.35);
     display:flex; align-items:center; justify-content:center;
     transition:background .3s ease, transform .3s var(--ease);
   }
-  .arrow-btn:hover{background:rgba(201,162,75,0.15); transform:scale(1.06);}
+  .arrow-btn:hover{background:rgba(126,196,232,0.15); transform:scale(1.06);}
   .arrow-btn:disabled{opacity:0.25; pointer-events:none;}
-  .arrow-btn svg{width:16px; height:16px; stroke:var(--gold-soft); fill:none; stroke-width:1.4;}
+  .arrow-btn svg{width:16px; height:16px; stroke:var(--celeste-soft); fill:none; stroke-width:1.4;}
   .photo-count{
     font-family:'Playfair Display',serif; font-style:italic;
-    letter-spacing:0.08em; color:var(--gold-soft); font-size:1rem; min-width:64px; text-align:center;
+    letter-spacing:0.08em; color:var(--celeste-soft); font-size:1rem; min-width:64px; text-align:center;
   }
 
   /* ================= SECTION TITLE ================= */
@@ -279,7 +276,7 @@
     font-weight:400;
     line-height:1.5;
   }
-  .story p:last-child{margin-bottom:0; color:var(--gold-soft);}
+  .story p:last-child{margin-bottom:0; color:var(--celeste-soft);}
 
   /* ================= SINGLE PHOTO + CTA BLOCKS ================= */
   .feature-block{
@@ -296,8 +293,8 @@
   .btn-gold{
     display:inline-block;
     padding:16px 44px;
-    border:1px solid var(--gold);
-    color:var(--gold-soft);
+    border:1px solid var(--celeste);
+    color:var(--celeste-soft);
     font-family:'EB Garamond', serif;
     letter-spacing:0.18em;
     text-transform:uppercase;
@@ -310,12 +307,12 @@
   .btn-gold::before{
     content:'';
     position:absolute; inset:0;
-    background:var(--gold);
+    background:var(--celeste);
     transform:translateY(101%);
     transition:transform .45s var(--ease);
     z-index:-1;
   }
-  .btn-gold:hover{color:#0a0a09;}
+  .btn-gold:hover{color:#0b1622;}
   .btn-gold:hover::before{transform:translateY(0);}
 
   .video-buttons{
@@ -333,8 +330,8 @@
     transition:border-color .3s ease, color .3s ease, transform .3s var(--ease);
   }
   .video-buttons a:hover{
-    border-color:var(--gold);
-    color:var(--gold-soft);
+    border-color:var(--madera-soft);
+    color:var(--madera-soft);
     transform:translateY(-3px);
   }
 
@@ -346,7 +343,7 @@
   .field label{
     display:block; margin-bottom:10px;
     font-size:0.78rem; letter-spacing:0.22em; text-transform:uppercase;
-    color:var(--gold-soft);
+    color:var(--celeste-soft);
   }
   .field input, .field textarea{
     width:100%;
@@ -362,7 +359,7 @@
   }
   .field textarea{min-height:110px;}
   .field input:focus, .field textarea:focus{
-    outline:none; border-bottom-color:var(--gold);
+    outline:none; border-bottom-color:var(--celeste);
   }
   .contact-submit{
     display:block; margin:14px auto 0 auto;
@@ -379,13 +376,13 @@
   }
   .footer-insta{
     width:46px; height:46px; border-radius:50%;
-    border:1px solid var(--gold);
+    border:1px solid var(--celeste);
     display:flex; align-items:center; justify-content:center;
     margin:0 auto 24px auto;
     transition:transform .35s var(--ease), background .3s ease;
   }
-  .footer-insta:hover{transform:translateY(-3px); background:rgba(201,162,75,0.1);}
-  .footer-insta svg{width:20px; height:20px; stroke:var(--gold-soft); fill:none; stroke-width:1.4;}
+  .footer-insta:hover{transform:translateY(-3px); background:rgba(126,196,232,0.1);}
+  .footer-insta svg{width:20px; height:20px; stroke:var(--celeste-soft); fill:none; stroke-width:1.4;}
   footer p{
     font-size:0.78rem; letter-spacing:0.1em; color:var(--ivory-dim); opacity:0.65;
   }
@@ -410,7 +407,7 @@
 
 <nav class="nav-overlay" id="navOverlay">
   <a href="#inicio" class="nav-link">Inicio</a>
-  <a href="#Cumpleaños" class="nav-link">Primer Añito</a>
+  <a href="#anito" class="nav-link">El añito</a>
   <a href="#portafolio" class="nav-link">Portafolio</a>
   <a href="#video" class="nav-link">Video</a>
   <a href="#contacto" class="nav-link">Contacto</a>
@@ -422,14 +419,14 @@
   <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.6.8 5 2.1 7L3 29l6.7-2.3c1.9 1 4.1 1.6 6.3 1.6 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.7c-2 0-3.9-.5-5.6-1.5l-.4-.2-4 1.4 1.3-3.9-.3-.4A10.2 10.2 0 0 1 5.8 15.5C5.8 10 10.4 5.5 16 5.5S26.2 10 26.2 15.5 21.6 25.7 16 25.7zm5.8-7.6c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.3 8.3 0 0 1-2.4-1.5 9.1 9.1 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.4.1-.4c0-.1 0-.3-.1-.4S13 10 12.7 9.4s-.6-.5-.8-.5h-.7c-.2 0-.5.1-.8.4a3.5 3.5 0 0 0-1.1 2.6c0 1.5 1.1 3 1.3 3.2s2.2 3.4 5.3 4.6c.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5s.3-1.3.2-1.5-.3-.2-.6-.4z"/></svg>
 </a>
 
-<!-- ============ HERO / CARRUSEL DE FOTOS ============ -->
+<!-- ============ HERO / CARRUSEL DE FOTOS (1 a 10) ============ -->
 <section class="hero" id="inicio" style="padding:0;">
   <div class="hero-frame">
     <!-- EDITAR: las fotos deben llamarse img/foto1.jpg ... img/foto10.jpg -->
     <img id="hero-img" src="img/foto1.jpg" alt="Augusto">
   </div>
   <div class="hero-caption">
-    <div class="eyebrow">Un dia para recordar</div>
+    <div class="eyebrow">Sábado 11 de Julio</div>
     <h1>El primer añito de Augusto</h1>
   </div>
   <div class="hero-nav">
@@ -443,24 +440,24 @@
   </div>
 </section>
 
-<!-- ============ MI QUERIDO BAUTISMO ============ -->
-<section id="Cumpleaños">
+<!-- ============ MI QUERIDO PRIMER AÑITO ============ -->
+<section id="anito">
   <div class="section-title reveal">
     <div class="eyebrow">Un día para atesorar</div>
-    <h2>Mi primer añito</h2>
+    <h2>Mi querido primer añito</h2>
   </div>
 
   <!-- ============ GALERÍA: 1 vertical + 4 horizontales ============ -->
   <div class="gallery-grid">
     <div class="ph gallery-vertical">
       <!-- EDITAR: foto vertical -->
-      <img src="IMG_8009 (1).jpg" alt="Alfonso">
+      <img src="img/foto-vertical.jpg" alt="Augusto">
     </div>
     <div class="gallery-horizontals">
-      <div class="ph"><img src="IMG_0056.jpg" alt="Augusto"></div>
-      <div class="ph"><img src="IMG_0034.jpg" alt="Augusto"></div>
-      <div class="ph"><img src="IMG_7956.jpg" alt="Augusto"></div>
-      <div class="ph"><img src="IMG_7967.jpg" alt="Augusto"></div>
+      <div class="ph"><img src="img/foto-horizontal-1.jpg" alt="Augusto"></div>
+      <div class="ph"><img src="img/foto-horizontal-2.jpg" alt="Augusto"></div>
+      <div class="ph"><img src="img/foto-horizontal-3.jpg" alt="Augusto"></div>
+      <div class="ph"><img src="img/foto-horizontal-4.jpg" alt="Augusto"></div>
     </div>
   </div>
 </section>
@@ -469,9 +466,9 @@
 <section>
   <div class="seal">A</div>
   <div class="story">
-    <p class="reveal">Hay días que la vida elige subrayar con letra dorada. El primer cumpleaños de Augusto es uno de ellos.</p>
-    <p class="reveal">Sonrisas, abrazos, juegos y el cariño de toda su familia se unieron para celebrar un momento que quedará para siempre en sus corazones. Cada mirada, cada abrazo y cada instante compartido hicieron de este día un recuerdo único.</p>
-    <p class="reveal">No hace falta guardar todo en una memoria cuando el corazón ya lo atesora. El primer añito de Augusto es, sencillamente, inolvidable.</p>
+    <p class="reveal">Hay días que quedan grabados para siempre. El primer año de Augusto es uno de ellos.</p>
+    <p class="reveal">La familia unida, entre risas y abrazos, celebrando cada paso, cada gesto, cada sonrisa nueva de este primer año que ya es historia.</p>
+    <p class="reveal">Un año de descubrimientos, de noches largas y días inolvidables. El primer añito de Augusto es, sencillamente, inolvidable.</p>
   </div>
 </section>
 
@@ -480,7 +477,7 @@
   <div class="feature-block">
     <div class="ph feature-photo">
       <!-- EDITAR: foto de portafolio -->
-      <img src="lv_0_20260712210654.jpg" alt="Augusto">
+      <img src="img/foto-portafolio.jpg" alt="Augusto">
     </div>
     <h3>Portafolio</h3>
     <!-- EDITAR: reemplazá PORTFOLIO_LINK en el script por el link real -->
@@ -493,7 +490,7 @@
   <div class="feature-block">
     <div class="ph feature-photo">
       <!-- EDITAR: foto de la sección video -->
-      <img src="IMG_0179.jpg" alt="Augusto">
+      <img src="img/foto-video.jpg" alt="Augusto">
     </div>
     <h3>Ir al video de Augusto</h3>
     <!-- EDITAR: reemplazá VIDEO_ALFONSO_LINK en el script -->
@@ -534,7 +531,7 @@
   <a href="#" id="footerInsta" class="footer-insta" target="_blank" rel="noopener" aria-label="Instagram">
     <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/></svg>
   </a>
-  <p>© 2026 Cumpleaños de Augusto. Todos los derechos reservados.</p>
+  <p>© 2026 Augusto. Todos los derechos reservados.</p>
 </footer>
 
 <script>
@@ -542,19 +539,19 @@
    ZONA DE EDICIÓN RÁPIDA
    Reemplazá los valores de acá abajo por los links y el número reales.
    ===================================================================== */
-const WHATSAPP_NUMBER        = "5493704097249"; // número para el botón flotante (formato internacional, sin + ni espacios)
-const CONTACT_WHATSAPP_NUMBER= "5493704097249"; // número al que se envía el formulario "Mi duda"
-const PORTFOLIO_LINK         = "https://lightroom.adobe.com/shares/d0bada9ed4d8498c84cb094c12dd1768/albums/1268b06d081b4aa99809c2d75feb97ae/assets/ef4865366a7d44a1b81f69103749da4b"; // link al portafolio de Alfonso
-const VIDEO_ALFONSO_LINK     = "https://es.wikipedia.org/wiki/Pan"; // link "Ir al video de Alfonso"
-const VIDEO_PRESENTACION_LINK= "https://www.google.com/search?q=pizza&oq=pozza&gs_lcrp=EgZjaHJvbWUqEQgBEAAYChgLGLEDGMkDGIAEMgYIABBFGDkyEQgBEAAYChgLGLEDGMkDGIAEMg4IAhAAGAoYCxiSAxiABDINCAMQABiSAxiABBiKBTIOCAQQLhgKGAsYsQMYgAQyCwgFEAAYChgLGIAEMg4IBhAAGAoYCxixAxiABDIOCAcQLhgKGAsYsQMYgAQyCwgIEC4YChgLGIAEMg4ICRAuGAoYCxixAxiABDIOCAoQLhgKGAsYsQMYgAQyFAgLEC4YChgLGMcBGLEDGNEDGIAEMgsIDBAAGAoYCxiABDIOCA0QABgKGAsYsQMYgAQyDggOEC4YChgLGLEDGIAE0gEIMjIyM2owajSoAg6wAgHxBdwoGlxdDUCV&client=tablet-android-tcl-gep1&sourceid=chrome-mobile&source=chrome.ob&ie=UTF-8"; // link "Video de presentación"
-const VIDEO_WHATSAPP_LINK    = "https://www.imdb.com/es/title/tt0848228/"; // link "Video para WhatsApp"
-const VIDEO_INSTAGRAM_LINK   = "https://www.google.com/search?q=fotos&oq=fotos&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABixAxiABDINCAIQABiSAxiABBiKBTINCAMQABiSAxiABBiKBTIKCAQQABixAxiABDIKCAUQABixAxiABDIGCAYQRRhBMgoIBxAAGLEDGIAEMhAICBAAGIMBGLEDGIAEGIoFMgYICRAAGAMyEAgKEAAYgwEYsQMYgAQYigUyBggLEAAYAzIKCAwQABixAxiABDINCA0QABixAxiABBiKBTIHCA4QABiABNIBCDE3MTJqMGo0qAIOsAIB8QUi6mIvPCK_MA&client=tablet-android-tcl-gep1&sourceid=chrome-mobile&source=chrome.ob&ie=UTF-8#sv=CAMSZxowKg4xM3JzUkNad2VicGw5TTIOMTNyc1JDWndlYnBsOU06DmdQdGw0MUZoMkJWdGJNIAQqLwobX0ZHSmJhcUtsS3J6VzFzUVByYnFINEE4XzU1Eg4xM3JzUkNad2VicGw5TRgAMAEYByDlv-mRAkoIEAEYASABKAE"; // link "Video Full HD para Instagram"
-const INSTAGRAM_LINK         = "https://www.instagram.com/"; // link al perfil de Instagram
+const WHATSAPP_NUMBER        = "5491100000000"; // número para el botón flotante (formato internacional, sin + ni espacios)
+const CONTACT_WHATSAPP_NUMBER= "5491100000000"; // número al que se envía el formulario "Mi duda"
+const PORTFOLIO_LINK         = "#"; // link al portafolio
+const VIDEO_ALFONSO_LINK     = "#"; // link "Ir al video de Augusto"
+const VIDEO_PRESENTACION_LINK= "#"; // link "Video de presentación"
+const VIDEO_WHATSAPP_LINK    = "#"; // link "Video para WhatsApp"
+const VIDEO_INSTAGRAM_LINK   = "#"; // link "Video Full HD para Instagram"
+const INSTAGRAM_LINK         = "#"; // link al perfil de Instagram
 /* ===================================================================== */
 
 document.getElementById('waFloat').href = `https://wa.me/${WHATSAPP_NUMBER}`;
 document.getElementById('portfolioBtn').href = PORTFOLIO_LINK;
-document.getElementById('videoMainBtn').href = VIDEO_Augusto_LINK;
+document.getElementById('videoMainBtn').href = VIDEO_ALFONSO_LINK;
 document.getElementById('videoPresentacionBtn').href = VIDEO_PRESENTACION_LINK;
 document.getElementById('videoWhatsappBtn').href = VIDEO_WHATSAPP_LINK;
 document.getElementById('videoInstagramBtn').href = VIDEO_INSTAGRAM_LINK;
@@ -575,19 +572,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 });
 
 /* ---------- carrusel de fotos (1 a 10) ---------- */
-const HERO_PHOTOS = [
-  "IMG_8077.jpg",
-  "IMG_8043.jpg",
-  "IMG_8021.jpg",
-  "IMG_7960.jpg",
-  "IMG_0226.jpg",
-  "IMG_0216.jpg",
-  "IMG_0206.jpg",
-  "IMG_0179.jpg",
-  "IMG_0115.jpg",
-  "IMG_0081.jpg"
-];
-const TOTAL_PHOTOS = HERO_PHOTOS.length;
+const TOTAL_PHOTOS = 10;
 let currentPhoto = 1;
 const heroImg = document.getElementById('hero-img');
 const photoCount = document.getElementById('photoCount');
@@ -597,7 +582,8 @@ const nextBtn = document.getElementById('nextBtn');
 function updateHero(){
   heroImg.style.opacity = 0;
   setTimeout(() => {
-    heroImg.src = HERO_PHOTOS[currentPhoto - 1];
+    // EDITAR: las imágenes deben llamarse img/foto1.jpg, img/foto2.jpg ... img/foto10.jpg
+    heroImg.src = `img/foto${currentPhoto}.jpg`;
     heroImg.style.opacity = 1;
   }, 200);
   photoCount.textContent = `${currentPhoto} / ${TOTAL_PHOTOS}`;
@@ -633,8 +619,8 @@ document.getElementById('contactForm').addEventListener('submit', function(e){
 const nav = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
   nav.style.background = window.scrollY > 60
-    ? 'linear-gradient(to bottom, rgba(10,10,9,0.95), rgba(10,10,9,0.0))'
-    : 'linear-gradient(to bottom, rgba(10,10,9,0.85), transparent)';
+    ? 'linear-gradient(to bottom, rgba(11,22,34,0.95), rgba(11,22,34,0.0))'
+    : 'linear-gradient(to bottom, rgba(11,22,34,0.85), transparent)';
 });
 </script>
 </body>
